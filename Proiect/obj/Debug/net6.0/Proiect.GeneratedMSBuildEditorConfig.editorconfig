@@ -9,41 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Proiect
 build_property.RootNamespace = Proiect
-build_property.ProjectDir = C:\Users\tripo\OneDrive\Desktop\Proiect\Proiect\
+build_property.ProjectDir = C:\Users\tripo\OneDrive\Desktop\Proiect\Proiect-II\Proiect\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\tripo\OneDrive\Desktop\Proiect\Proiect
+build_property.MSBuildProjectDirectory = C:\Users\tripo\OneDrive\Desktop\Proiect\Proiect-II\Proiect
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/Error.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/Index.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/Leagues/Index.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEaXNwbGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/Privacy.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/_ViewImports.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/_ViewStart.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect/Pages/Shared/_Layout.cshtml]
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q49cwo9wvm

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FqVQOaqYY7VO4ASR3PXFYFHsp81qy2PIaFcmIn3prgUf29oOrxE9xkKnC2T7GaUfbsd8POwegxXsq30Hz4mhRQ==",
+  "dgSpecHash": "/QeEUQbHCkuiVwBimvhSiw56TXYW0kxm9y/XS4ZQQWh9wwMy1/PhO/VnBYzdG+Ircwu8AMxHL+2ep4PRBlnEcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect\\Proiect.csproj",
+  "projectFilePath": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\Proiect.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tripo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\tripo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

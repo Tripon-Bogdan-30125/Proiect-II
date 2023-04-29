@@ -2,46 +2,52 @@
 @model Proiect.Pages.Leagues.IndexModel
 @{
 }
+
 <br>
 
- <h2>List of leagues</h2>
-<select class="form-control" onchange="setLeagueValue()">
-	<option>Select League</option>
-	<option value="Premier League">Premier League</option>
-	<option value="Ligue 1">Ligue 1</option>
-	<option value="LaLiga">LaLiga</option>
-	<option value="Serie A">Serie A</option>
-	<option value="Bundesliga">Bundesliga</option>
-	<option value="SuperLiga">SuperLiga</option>
-</select>
+<h2>List of Teams</h2>
+<a class='btn btn-primary' href='/Leagues/Create'>New Team</a>
 
-<input type="hidden" id="leagueName" name="leagueName" />
+<table class="table">
+	<thead>
+		<tr>
+		
+			<th>ID</th>
+			<th>Name</th>
+			<th>TeamValue</th>
+			<th>SquadSize</th>
+			<th>Stadium</th>
+			<th>City</th>
+			<th>IdLeague</th>
+			<th>Action</th>
 
-<table id="team-table">
+		</tr>
+	</thead>
 	<tbody>
-			@foreach (var item in Model.listTeam)
+		@foreach(var item in Model.teams)
 			{
-			<tr>
+				<tr>
+					<td>@item.id</td>
+					<td>@item.name</td>
+					<td>@item.teamValue</td>
+					<td>@item.squadSize</td>
+					<td>@item.stadium</td>
+					<td>@item.city</td>
+                    <td>@item.idLeague</td>
+					<td>
 
-				<td>@item.name</td>
-				<td>@item.teamValue</td>
-				<td>@item.squadSize</td>
-				<td>@item.stadium</td>
-				<td>@item.city</td>
+					    <a class="btn btn-primary btn-sm" href="/Leagues/Edit?id=@item.id">Edit</a>
+						<a class="btn btn-danger btn-sm" href="/Leagues/Delete?id=@item.id">Delete</a>
+						<a class="btn btn-light btn-sm" href="/Leagues/Display?id=@item.id">Display</a>
 
-			</tr>
+					</td>
+
+				</tr>
 			}
 	</tbody>
 
+
+
 </table>
 
-<script>
-	function setLeagueValue() {
-		var selectElement = document.querySelector('.form-control');
-		var selectedValue = selectElement.value;
-		document.getElementById("leagueName").value = selectedValue;
-	}
-</script>
-
 </br>
-

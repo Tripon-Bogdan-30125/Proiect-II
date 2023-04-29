@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect\\Proiect.csproj": {}
+    "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\Proiect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect\\Proiect.csproj": {
+    "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\Proiect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect\\Proiect.csproj",
+        "projectUniqueName": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\Proiect.csproj",
         "projectName": "Proiect",
-        "projectPath": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect\\Proiect.csproj",
+        "projectPath": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\Proiect.csproj",
         "packagesPath": "C:\\Users\\tripo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect\\obj\\",
+        "outputPath": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
