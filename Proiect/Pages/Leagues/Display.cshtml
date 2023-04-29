@@ -3,49 +3,51 @@
 @{
 }
 
-
 <br>
 
 <h2>List of Players</h2>
 
-<table class="table">
-	<thead>
-		<tr>
-
-			<th>Id</th>
-			<th>Name</th>
-			<th>Nationality</th>
-			<th>Age</th>
-			<th>Position</th>
-			<th>Height</th>
-			<th>Foot</th>
-			<th>PlayerValue</th>
-			<th>InternationalStatus</th>
-			<th>Outfitter</th>
-			<th>IdTeam</th>
-			<th>IdNationalTeam</th>
-
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item2 in Model.PlayerList)
-		{
+	<table class="table">
+		<thead>
 			<tr>
-			    <td>@item2.id</td>
-				<td>@item2.name</td>
-				<td>@item2.nationality</td>
-				<td>@item2.age</td>
-				<td>@item2.position</td>
-				<td>@item2.height</td>
-				<td>@item2.foot</td>
-				<td>@item2.playerValue</td>
-				<td>@item2.internationalStatus</td>
-				<td>@item2.outfitter</td>
-				<td>@item2.idTeam</td>
-				<td>@item2.idNationalTeam</td>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Nationality</th>
+				<th>Age</th>
+				<th>Position</th>
+				<th>Height</th>
+				<th>Foot</th>
+				<th>PlayerValue</th>
+				<th>InternationalStatus</th>
+				<th>Outfitter</th>
+				<th>IdTeam</th>
+				<th>IdNationalTeam</th>
 
 			</tr>
-		}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+				@foreach (var item2 in Model.PlayerList)
+				{
+				<tr>
+					<td>@item2.id</td>
+					<td>@item2.name</td>
+					<td>@item2.nationality</td>
+					<td>@item2.age</td>
+					<td>@item2.position</td>
+					<td>@item2.height</td>
+					<td>@item2.foot</td>
+					<td>@item2.playerValue</td>
+					<td>@item2.internationalStatus</td>
+					<td>@item2.outfitter</td>
+					<td>@item2.idTeam</td>
+					<td>@item2.idNationalTeam</td>
+
+				</tr>
+				}
+		</tbody>
+	</table>
+
+
+
+
 </br>

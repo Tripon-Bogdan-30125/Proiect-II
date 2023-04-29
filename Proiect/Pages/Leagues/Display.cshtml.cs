@@ -8,19 +8,23 @@ namespace Proiect.Pages.Leagues
     {
 
        public List<PlayerInfo> PlayerList = new List<PlayerInfo>();
-        public void OnGet()
-        {
+		public void OnGet()
+		{
 			try
-			{
-				String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=ourwebsite;Integrated Security=True";
+			{ 
+				String id = Request.Query["id"];
+				String connectionString = @"Data Source=.\sqlexpress;Initial Catalog=ourwebsite;Integrated Security=True";
 				using (SqlConnection connection = new SqlConnection(connectionString))
 				{
-					connection.Open();
-					String sql = "SELECT * FROM players";
+					connection.Open();	
+					String sql = "SELECT * FROM players WHERE idTeam = @id";
 					using (SqlCommand command = new SqlCommand(sql, connection))
 					{
+						command.Parameters.AddWithValue("@id", id);
+						command.ExecuteNonQuery();
 						using (SqlDataReader reader = command.ExecuteReader())
 						{
+							
 							while (reader.Read())
 							{
 								PlayerInfo player1 = new PlayerInfo();
@@ -29,7 +33,7 @@ namespace Proiect.Pages.Leagues
 								player1.nationality = reader.GetString(2);
 								player1.age = "" + reader.GetInt32(3);
 								player1.position = reader.GetString(4);
-								player1.height = "" + reader.GetFloat(5);
+								player1.height = reader.GetString(5);
 								player1.foot = reader.GetString(6);
 								player1.playerValue = reader.GetString(7);
 								player1.internationalStatus = reader.GetString(8);
@@ -50,7 +54,9 @@ namespace Proiect.Pages.Leagues
 			{
 				Console.WriteLine("Exception: " + ex.ToString());
 			}
+
 		}
+		
     }
 
 
