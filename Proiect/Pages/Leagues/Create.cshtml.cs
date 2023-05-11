@@ -6,7 +6,7 @@ namespace Proiect.Pages.Leagues
 {
     public class CreateModel : PageModel
     {
-        public TeamInfo info = new TeamInfo();
+        public LeagueInfo info = new LeagueInfo();
         public String errorMessage = "";
         public String succesMessage = "";
         public void OnGet()
@@ -17,14 +17,14 @@ namespace Proiect.Pages.Leagues
         {
             info.id = Request.Form["id"];   
             info.name = Request.Form["name"];
-            info.teamValue = Request.Form["teamValue"];
-            info.squadSize = Request.Form["squadSize"];
-            info.stadium = Request.Form["stadium"];
-            info.city = Request.Form["city"];
-            info.idLeague = Request.Form["idLeague"];
+            info.country = Request.Form["country"];
+            info.marketValue = Request.Form["marketValue"];
+            info.numberOfTeams = Request.Form["numberOfTeams"];
+            info.ranking = Request.Form["ranking"];
+            
 
 
-            if(info.id.Length == 0 || info.name.Length == 0 || info.teamValue.Length == 0 || info.squadSize.Length == 0 || info.stadium.Length == 0 || info.city.Length == 0 || info.idLeague.Length == 0)
+            if(info.id.Length == 0 || info.name.Length == 0 || info.country.Length == 0 || info.marketValue.Length == 0 || info.numberOfTeams.Length == 0 || info.ranking.Length == 0)
             {
                 errorMessage = "All fields must be completed";
                 return;
@@ -38,16 +38,15 @@ namespace Proiect.Pages.Leagues
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    String sql = "SET IDENTITY_INSERT [teams] ON INSERT INTO teams " + "(id, name, teamValue, squadSize, stadium, city, idLeague) VALUES " + "(@id, @name, @teamValue, @squadSize, @stadium, @city, @idLeague)";
+                    String sql = "SET IDENTITY_INSERT [league] ON INSERT INTO league " + "(id, name,country, marketValue, numberOfTeams, ranking) VALUES " + "(@id, @name,@country, @marketValue, @numberOfTeams, @ranking)";
                     using (SqlCommand command = new SqlCommand(sql,connection))
                     {
                         command.Parameters.AddWithValue("@id", info.id);
                         command.Parameters.AddWithValue("@name", info.name);
-                        command.Parameters.AddWithValue("@teamValue", info.teamValue);
-                        command.Parameters.AddWithValue("@squadSize", info.squadSize);
-                        command.Parameters.AddWithValue("@stadium", info.stadium);
-                        command.Parameters.AddWithValue("@city", info.city);
-                        command.Parameters.AddWithValue("@idLeague", info.idLeague);
+                        command.Parameters.AddWithValue("@country",info.country);
+                        command.Parameters.AddWithValue("@marketValue", info.marketValue);
+                        command.Parameters.AddWithValue("@numberOfTeams", info.numberOfTeams);
+                        command.Parameters.AddWithValue("@ranking", info.ranking);
                         command.ExecuteNonQuery();
 					}
 
@@ -61,10 +60,10 @@ namespace Proiect.Pages.Leagues
 
 
             info.name = "";
-            info.teamValue = "";
-            info.squadSize = "";
-            info.stadium = "";
-            info.city = "";
+            info.country = "";
+            info.marketValue = "";
+            info.numberOfTeams = "";
+            info.ranking = "";
             succesMessage = "Team created succesfully";
 
             Response.Redirect("/Leagues/Index");

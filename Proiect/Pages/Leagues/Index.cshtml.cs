@@ -8,7 +8,7 @@ namespace Proiect.Pages.Leagues
     {
 
 
-        public List<TeamInfo> teams =  new List<TeamInfo>();    
+        public List<LeagueInfo> leagues =  new List<LeagueInfo>();    
 
         public void OnGet()
         {
@@ -19,27 +19,26 @@ namespace Proiect.Pages.Leagues
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    String sql = "SELECT * FROM teams";
+                    String sql = "SELECT * FROM league";
                     using (SqlCommand command = new SqlCommand(sql,connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                            while(reader.Read())
                             {
-                                TeamInfo info = new TeamInfo();
+                                LeagueInfo info = new LeagueInfo();
                                 info.id = "" + reader.GetInt32(0);
                                 info.name = reader.GetString(1);
-                                info.teamValue = reader.GetString(2);
-                                info.squadSize = "" + reader.GetInt32(3);
-                                info.stadium = reader.GetString(4);
-                                info.city = reader.GetString(5);
-                                info.idLeague = "" + reader.GetInt32(6);
+                                info.country = reader.GetString(2);
+                                info.marketValue =  reader.GetString(3);
+                                info.numberOfTeams = "" + reader.GetInt32(4);
+                                info.ranking = "" + reader.GetInt32(5);
 
-                                teams.Add(info);
+                                leagues.Add(info);
                             }
                         }
                     }
-
+                    Console.WriteLine(leagues);
                 }
 
             }
@@ -52,18 +51,14 @@ namespace Proiect.Pages.Leagues
     }
 
 
-    public class TeamInfo
+    public class LeagueInfo
     {
 
         public String id;
         public String name;
-        public String teamValue;
-        public String squadSize;
-        public String stadium;
-        public String city;
-        public String idLeague;
-
+        public String country;
+        public String marketValue;
+        public String numberOfTeams;
+        public String ranking;
     }
-
-
 }

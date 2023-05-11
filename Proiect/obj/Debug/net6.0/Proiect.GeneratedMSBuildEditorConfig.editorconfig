@@ -28,16 +28,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/CreateTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xDcmVhdGVUZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Display.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEaXNwbGF5LmNzaHRtbA==
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/DeleteTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEZWxldGVUZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/DisplayPlayers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEaXNwbGF5UGxheWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/DisplayTeams.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xEaXNwbGF5VGVhbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/EditTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhZ3Vlc1xFZGl0VGVhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tripo/OneDrive/Desktop/Proiect/Proiect-II/Proiect/Pages/Leagues/Index.cshtml]

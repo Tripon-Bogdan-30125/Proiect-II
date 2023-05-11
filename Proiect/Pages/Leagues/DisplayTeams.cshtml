@@ -1,0 +1,51 @@
+﻿@page
+@model Proiect.Pages.Leagues.DisplayTeamsModel
+@{
+}
+
+<br>
+
+<h2>List of Teams</h2>
+<a class='btn btn-primary' href='/Leagues/CreateTeam'>New Team</a>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>TeamValue</th>
+				<th>SquadSize</th>
+				<th>Stadium</th>
+				<th>City</th>
+				<th>idLeague</th>
+				<th>Action</th>
+
+			</tr>
+		</thead>
+		<tbody>
+				@foreach (var item2 in Model.TeamList)
+				{
+				<tr>
+					<td>@item2.id</td>
+					<td>@item2.name</td>
+					<td>@item2.teamValue</td>
+					<td>@item2.squadSize</td>
+					<td>@item2.stadium</td>
+					<td>@item2.city</td>
+					<td>@item2.idLeague</td>
+				<td>
+					<a class="btn btn-primary btn-sm" href="/Leagues/EditTeam?id=@item2.id">Edit</a>
+					<a class="btn btn-danger btn-sm" href="/Leagues/DeleteTeam?id=@item2.id">Delete</a>
+					<a class="btn btn-light btn-sm" href="/Leagues/DisplayPlayers?id=@item2.id">DisplayTeams</a>
+				</td>
+
+				</tr>
+				
+				}
+		</tbody>
+	</table>
+
+
+
+
+</br>

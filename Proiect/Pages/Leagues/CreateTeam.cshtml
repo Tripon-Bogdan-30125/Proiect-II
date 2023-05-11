@@ -1,9 +1,9 @@
 ﻿@page
-@model Proiect.Pages.Leagues.EditModel
+@model Proiect.Pages.Leagues.CreateTeamModel
 @{
 }
 
-<h2>Edit League</h2>
+<h2> New Team</h2>
 
 
 @if (Model.errorMessage.Length > 0)
@@ -17,7 +17,6 @@
 
 <form method="POST">
 
-	<input type="hidden" name="id" value="@Model.info.id">
 
 
 	<div class="row mb-3">
@@ -27,31 +26,42 @@
 		</div>
 	</div>
 
+
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">Country</label>
+		<label class="col-sm-3 col-form-label">Team Value</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="country" value="@Model.info.country">
+			<input type="text" class="form-control" name="teamValue" value="@Model.info.teamValue">
+		</div>
+	</div>
+
+
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Squad Size</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="squadSize" value="@Model.info.squadSize">
 		</div>
 	</div>
 
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">Market Value</label>
+		<label class="col-sm-3 col-form-label">Stadium</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="marketValue" value="@Model.info.marketValue">
+			<input type="text" class="form-control" name="stadium" value="@Model.info.stadium">
 		</div>
 	</div>
 
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">Number Of Teams</label>
+		<label class="col-sm-3 col-form-label">City</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="numberOfTeams" value="@Model.info.numberOfTeams">
+			<input type="text" class="form-control" name="city" value="@Model.info.city">
 		</div>
 	</div>
 
+
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">Ranking</label>
+		<label class="col-sm-3 col-form-label">Id League</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="ranking" value="@Model.info.ranking">
+			<input type="text" class="form-control" name="idLeague" value="@Model.info.idLeague">
 		</div>
 	</div>
 
@@ -70,8 +80,6 @@
 	}
 
 
-
-
 	<div class="row mb-3">
 		<div class="offset-sm-3 col-sm-3 d-grid">
 			<button type="submit" class="btn btn-primary">Submit</button>
@@ -81,9 +89,5 @@
 		</div>
 	</div>
 
-
-
-
-
-
 </form>
+

@@ -4,7 +4,7 @@
 }
 
 
-<h2> New Team</h2>
+<h2> New League</h2>
 
 
 @if (Model.errorMessage.Length > 0)
@@ -21,7 +21,7 @@
 	
 	
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">id</label>
+		<label class="col-sm-3 col-form-label">Id</label>
 		<div class="col-sm-6">
 			<input type="text" class="form-control" name="id" value="@Model.info.id">
 		</div>
@@ -29,45 +29,40 @@
 
 
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">name</label>
+		<label class="col-sm-3 col-form-label">Name</label>
 		<div class="col-sm-6">
 			<input type="text" class="form-control" name="name" value="@Model.info.name">
 		</div>
 	</div>
 
-	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">teamValue</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" name="teamValue" value="@Model.info.teamValue">
-		</div>
-	</div>
 
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">squadSize</label>
+		<label class="col-sm-3 col-form-label">Country</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="squadSize" value="@Model.info.squadSize">
-		</div>
-	</div>
-
-	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">stadium</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" name="stadium" value="@Model.info.stadium">
-		</div>
-	</div>
-
-	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">city</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" name="city" value="@Model.info.city">
+			<input type="text" class="form-control" name="country" value="@Model.info.country">
 		</div>
 	</div>
 
 
+
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">idLeague</label>
+		<label class="col-sm-3 col-form-label">Market Value</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="idLeague" value="@Model.info.idLeague">
+			<input type="text" class="form-control" name="marketValue" value="@Model.info.marketValue">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Number Of Teams</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="numberOfTeams" value="@Model.info.numberOfTeams">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Ranking</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="ranking" value="@Model.info.ranking">
 		</div>
 	</div>
 

@@ -5,8 +5,8 @@
 
 <br>
 
-<h2>List of Teams</h2>
-<a class='btn btn-primary' href='/Leagues/Create'>New Team</a>
+<h2>List of Leagues</h2>
+<a class='btn btn-primary' href='/Leagues/Create'>New League</a>
 
 
 <table class="table">
@@ -14,30 +14,28 @@
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
-			<th>TeamValue</th>
-			<th>SquadSize</th>
-			<th>Stadium</th>
-			<th>City</th>
-			<th>IdLeague</th>
+			<th>Country</th>
+			<th>MarketValue</th>
+			<th>NumberOfTeams</th>
+			<th>Ranking</th>
 			<th>Action</th>
 		</tr>
 	</thead>
 	<tbody>
-		@foreach(var item in Model.teams)
+		@foreach(var item in Model.leagues)
 			{
 				<tr>
 					<td>@item.id</td>
 					<td>@item.name</td>
-					<td>@item.teamValue</td>
-					<td>@item.squadSize</td>
-					<td>@item.stadium</td>
-					<td>@item.city</td>
-                    <td>@item.idLeague</td>
-					<td>
+					<td>@item.country</td>
+					<td>@item.marketValue</td>
+					<td>@item.numberOfTeams</td>
+					<td>@item.ranking</td>
 
+  					<td>
 					    <a class="btn btn-primary btn-sm" href="/Leagues/Edit?id=@item.id">Edit</a>
 						<a class="btn btn-danger btn-sm" href="/Leagues/Delete?id=@item.id">Delete</a>
-						<a class="btn btn-light btn-sm" href="/Leagues/Display?id=@item.id">Display</a>
+						<a class="btn btn-light btn-sm" href="/Leagues/DisplayTeams?id=@item.id">DisplayTeams</a>
 
 					</td>
 

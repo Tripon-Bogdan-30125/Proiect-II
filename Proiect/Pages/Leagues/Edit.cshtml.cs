@@ -6,7 +6,7 @@ namespace Proiect.Pages.Leagues
 {
     public class EditModel : PageModel
     {
-        public TeamInfo info = new TeamInfo();
+        public LeagueInfo info = new LeagueInfo();
         public String errorMessage = "";
         public String succesMessage = "";
 		public void OnGet()
@@ -18,7 +18,7 @@ namespace Proiect.Pages.Leagues
 				using (SqlConnection connection = new SqlConnection(connectionString))
 				{
 					connection.Open();
-					String sql = "SELECT * FROM teams WHERE id=@id";
+					String sql = "SELECT * FROM league WHERE id=@id";
 					using (SqlCommand command = new SqlCommand(sql, connection))
 					{
 						command.Parameters.AddWithValue("@id", id);
@@ -28,11 +28,10 @@ namespace Proiect.Pages.Leagues
 							{							
 								info.id = "" + reader.GetInt32(0);
 								info.name = reader.GetString(1);
-								info.teamValue = reader.GetString(2);
-								info.squadSize = "" + reader.GetInt32(3);
-								info.stadium = reader.GetString(4);
-								info.city = reader.GetString(5);
-								info.idLeague = "" + reader.GetInt32(6);
+								info.country = reader.GetString(2);
+								info.marketValue =  reader.GetString(3);
+								info.numberOfTeams = "" + reader.GetInt32(4);
+								info.ranking = "" + reader.GetInt32(5);
 							}
 						}
 					}
@@ -49,13 +48,13 @@ namespace Proiect.Pages.Leagues
         {
 			info.id = Request.Form["id"];
 			info.name = Request.Form["name"];
-			info.teamValue = Request.Form["teamValue"];
-			info.squadSize = Request.Form["squadSize"];
-			info.stadium = Request.Form["stadium"];
-			info.city = Request.Form["city"];
-			info.idLeague = Request.Form["idLeague"];
+			info.country = Request.Form["country"];
+			info.marketValue = Request.Form["marketValue"];
+			info.numberOfTeams = Request.Form["numberOfTeams"];
+			info.ranking = Request.Form["ranking"];
+			
 
-			if (info.id.Length == 0 || info.name.Length == 0 || info.teamValue.Length == 0 || info.squadSize.Length == 0 || info.stadium.Length == 0 || info.city.Length == 0 || info.idLeague.Length == 0)
+			if (info.id.Length == 0 || info.name.Length == 0 || info.country.Length == 0 || info.marketValue.Length == 0 || info.numberOfTeams.Length == 0 || info.ranking.Length == 0)
 			{
 				errorMessage = "All fields must be completed";
 				return;
@@ -67,18 +66,17 @@ namespace Proiect.Pages.Leagues
 				using (SqlConnection connection = new SqlConnection(connectionString))
 				{
 					connection.Open();
-					String sql = "UPDATE teams "
-						+ "SET name=@name, teamValue=@teamValue, squadSize=@squadSize, stadium=@stadium, city=@city, idLeague=@idLeague " +
+					String sql = "UPDATE league "
+						+ "SET name=@name, country=@country, marketValue=@marketValue, numberOfTeams=@numberOfTeams, ranking=@ranking " +
 						"WHERE id=@id";
 
 					using (SqlCommand command = new SqlCommand(sql, connection))
 					{
 						command.Parameters.AddWithValue("@name", info.name);
-						command.Parameters.AddWithValue("@teamValue", info.teamValue);
-						command.Parameters.AddWithValue("@squadSize", info.squadSize);
-						command.Parameters.AddWithValue("@stadium", info.stadium);
-						command.Parameters.AddWithValue("@city", info.city);
-						command.Parameters.AddWithValue("@idLeague", info.idLeague);
+						command.Parameters.AddWithValue("@country", info.country);
+						command.Parameters.AddWithValue("@marketValue", info.marketValue);
+						command.Parameters.AddWithValue("@numberOfTeams", info.numberOfTeams);
+						command.Parameters.AddWithValue("@ranking", info.ranking);
 						command.Parameters.AddWithValue("@id", info.id);
 						command.ExecuteNonQuery();
 					}
