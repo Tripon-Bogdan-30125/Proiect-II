@@ -3,45 +3,119 @@
 @{
 }
 
-<br>
+<style>
+    /* CSS Styles for the table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-<h2>List of Leagues</h2>
-<a class='btn btn-primary' href='/Leagues/Create'>New League</a>
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        font-weight: bold; /* Set text to bold */
+        color: #000; /* Set text color to black */
+    }
+
+    th {
+        background-color: #002366;
+        color: #fff;
+    }
+
+    /* CSS Styles for the buttons */
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    .btn-primary {
+        background-color: #002366;
+        color: #fff;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    .btn-light {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    .btn-sm {
+        font-size: 14px;
+    }
+
+    /* CSS Styles for the container */
+    .container {
+        max-width: 1200px; /* Adjust the max-width to make it bigger */
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    /* Additional CSS Styles */
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+        font-weight: bold; /* Set body text to bold */
+        color: #000; /* Set body text color to black */
+    }
+
+    h2 {
+        color: #002366;
+        margin-bottom: 20px;
+    }
 
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Country</th>
-			<th>MarketValue</th>
-			<th>NumberOfTeams</th>
-			<th>Ranking</th>
-			<th>Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach(var item in Model.leagues)
-			{
-				<tr>
-					<td>@item.id</td>
-					<td>@item.name</td>
-					<td>@item.country</td>
-					<td>@item.marketValue</td>
-					<td>@item.numberOfTeams</td>
-					<td>@item.ranking</td>
 
-  					<td>
-					    <a class="btn btn-primary btn-sm" href="/Leagues/Edit?id=@item.id">Edit</a>
-						<a class="btn btn-danger btn-sm" href="/Leagues/Delete?id=@item.id">Delete</a>
-						<a class="btn btn-light btn-sm" href="/Leagues/DisplayTeams?id=@item.id">DisplayTeams</a>
+</style>
 
-					</td>
+<audio id="background-audio" autoplay loop hidden>
+    <source src="/lib/music/Intro - UEFA Champions League [UCL] 2007.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
-				</tr>
-			}
-	</tbody>
-</table>
 
-</br>
+<div class="container">
+    <h2>List of Leagues</h2>
+    <a class="btn btn-primary" href="/Leagues/Create">New League</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>MarketValue</th>
+                <th>NumberOfTeams</th>
+                <th>Ranking</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.leagues)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.name</td>
+                    <td>@item.country</td>
+                    <td>@item.marketValue</td>
+                    <td>@item.numberOfTeams</td>
+                    <td>@item.ranking</td>
+
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Leagues/Edit?id=@item.id">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Leagues/Delete1?id=@item.id">Delete</a>
+                        <a class="btn btn-light btn-sm" href="/Leagues/DisplayTeams?id=@item.id">DisplayTeams</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

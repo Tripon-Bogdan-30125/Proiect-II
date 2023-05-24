@@ -3,6 +3,76 @@
 @{
 }
 
+<style>
+    /* CSS Styles for the table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        font-weight: bold; /* Set text to bold */
+        color: #000; /* Set text color to black */
+    }
+
+    th {
+        background-color: #002366;
+        color: #fff;
+    }
+
+    /* CSS Styles for the buttons */
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    .btn-primary {
+        background-color: #002366;
+        color: #fff;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    .btn-light {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    .btn-sm {
+        font-size: 14px;
+    }
+
+    /* CSS Styles for the container */
+    .container {
+        max-width: 1200px; /* Adjust the max-width to make it bigger */
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    /* Additional CSS Styles */
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+        font-weight: bold; /* Set body text to bold */
+        color: #000; /* Set body text color to black */
+    }
+
+    h2 {
+        color: #002366;
+        margin-bottom: 20px;
+    }
+</style>
+
+
 <br>
 
 <h2>List of Teams</h2>
@@ -35,8 +105,9 @@
 					<td>@item2.idLeague</td>
 				<td>
 					<a class="btn btn-primary btn-sm" href="/Leagues/EditTeam?id=@item2.id">Edit</a>
-					<a class="btn btn-danger btn-sm" href="/Leagues/DeleteTeam?id=@item2.id">Delete</a>
-					<a class="btn btn-light btn-sm" href="/Leagues/DisplayPlayers?id=@item2.id">DisplayTeams</a>
+					<a class="btn btn-danger btn-sm" href="/Leagues/DeleteTeam1?id=@item2.id">Delete</a>
+					<a class="btn btn-light btn-sm" href="/Leagues/DisplayPlayers?id=@item2.id">DisplayPlayers</a>
+					<a class="btn btn-dark btn-sm" href="/Leagues/Staff?id=@item2.id">DisplayStaff</a>
 				</td>
 
 				</tr>

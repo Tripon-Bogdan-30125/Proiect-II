@@ -3,16 +3,228 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Proiect</title>
+    <title>@ViewData["Title"] - Football Manager</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Proiect.styles.css" asp-append-version="true" />
+    <style>
+        /* CSS for the Start Page */
+        /* CSS Styles for Football News Site */
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("/lib/images/alex-azabache-1cPWeb3Ud30-unsplash.jpg"); /* Replace 'path/to/background-image.jpg' with the actual path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #16387f;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF80;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            height: 500px; /* Increased height for the slider */
+            margin-bottom: 20px;
+        }
+
+        .slider-inner {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s;
+        }
+
+        .slider-item {
+            flex: 0 0 33.33%;
+            padding: 10px;
+        }
+
+            .slider-item img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+        /* ... rest of the CSS code ... */
+
+        .article {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #FFFFFF80;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .article h2 {
+                margin: 0;
+                font-size: 24px;
+                color: #16387f;
+                margin-bottom: 10px;
+            }
+
+            .article p {
+                color: black;
+                margin-bottom: 15px;
+            }
+
+            .article .author {
+                color: black;
+                margin-bottom: 5px;
+            }
+
+            .article .date {
+                color: black;
+                font-style: italic;
+            }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .links a {
+                margin: 0 10px;
+                color: #16387f;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .links a:hover {
+                    color: #0053a0;
+                }
+
+        footer {
+            background-color: #16387f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+            footer p {
+                margin: 0;
+            }
+
+        .privacy-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #16387f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .privacy-info {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #777;
+        }
+
+            .privacy-info h2 {
+                margin: 0;
+                font-size: 24px;
+                color: #16387f;
+                margin-bottom: 10px;
+            }
+
+        /* Slider Styles */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+            .slider-nav button {
+                background: transparent;
+                border: none;
+                color: black;
+                font-size: 20px;
+                cursor: pointer;
+                transition: color 0.3s;
+            }
+
+                .slider-nav button:hover {
+                    color: black;
+                }
+
+        .slider-item {
+            position: relative;
+        }
+
+            .slider-item img {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+
+        .footer {
+            background-color: #002366;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+            .footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        /* CSS Styles for the privacy policy section */
+        .privacy-policy {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            display: none;
+        }
+
+            .privacy-policy h2 {
+                color: #002366;
+                margin-bottom: 20px;
+            }
+
+    </style>
+
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Proiect</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Football News Website</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,28 +232,40 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Design/HomePage">News</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Leagues/Index">Leagues</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Leagues/Competiton">Competition</a>
+                        </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
+
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy Policy - Football Manager</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/Proiect.styles.css" asp-append-version="true" />
+
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+       
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Proiect - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - Proiect - <a asp-area="" asp-page="/Shared/Privacy">Privacy</a>
         </div>
     </footer>
 

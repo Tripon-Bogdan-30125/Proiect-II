@@ -1,0 +1,309 @@
+﻿@page
+@model Proiect.Pages.Design.HomePageModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football News</title>
+    <style>
+        /* CSS Styles for Football News Site */
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("/lib/images/alex-azabache-1cPWeb3Ud30-unsplash.jpg"); /* Replace 'path/to/background-image.jpg' with the actual path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #16387f;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF80;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            height: 500px; /* Increased height for the slider */
+            margin-bottom: 20px;
+        }
+
+        .slider-inner {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s;
+        }
+
+        .slider-item {
+            flex: 0 0 33.33%;
+            padding: 10px;
+        }
+
+            .slider-item img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+        /* ... rest of the CSS code ... */
+
+        .article {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #FFFFFF80;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .article h2 {
+                margin: 0;
+                font-size: 24px;
+                color: #16387f;
+                margin-bottom: 10px;
+            }
+
+            .article p {
+                color: black;
+                margin-bottom: 15px;
+            }
+
+            .article .author {
+                color: black;              
+                margin-bottom: 5px;
+            }
+
+            .article .date {
+                color: black;
+                font-style: italic;
+            }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .links a {
+                margin: 0 10px;
+                color: #16387f;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .links a:hover {
+                    color: #0053a0;
+                }
+
+        footer {
+            background-color: #16387f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+            footer p {
+                margin: 0;
+            }
+
+        .privacy-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #16387f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .privacy-info {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #777;
+        }
+
+            .privacy-info h2 {
+                margin: 0;
+                font-size: 24px;
+                color: #16387f;
+                margin-bottom: 10px;
+            }
+
+        /* Slider Styles */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+            .slider-nav button {
+                background: transparent;
+                border: none;
+                color: black;
+                font-size: 20px;
+                cursor: pointer;
+                transition: color 0.3s;
+            }
+
+                .slider-nav button:hover {
+                    color: black;
+                }
+
+        .slider-item {
+            position: relative;
+        }
+
+            .slider-item img {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+                object-fit: contain;
+            }
+    </style>
+</head>
+<body>
+
+    <audio id="background-audio" autoplay loop hidden>
+        <source src="/lib/music/Intro - UEFA Champions League [UCL] 2007.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <header>
+        <h1>Football News</h1>
+    </header>
+
+    <main>
+        <div class="slider">
+            <div class="slider-inner">
+                <div class="slider-item">
+                    <img src="~/lib/images/2.jpg" alt="Football News 1" style="max-width: 60%; max-height: 60%; display: block; margin: 0 auto;">
+                    <div class="slider-caption">
+                        <p style="text-align: center;">Champions League final will take place in Istanbul between Inter Milan and Man City</p>
+                        <p style="text-align: center;"><a href="https://www.uefa.com/uefachampionsleague/news/0271-142ef4c4d9e4-ba6d9cd2db69-1000--2023-uefa-champions-league-final-istanbul/">For more information click here</a></p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="~/lib/images/3.jpg" alt="Football News 1" style="max-width: 60%; max-height: 60%; display: block; margin: 0 auto;" alt="Football News 2">
+                    <div class="slider-caption">
+                        <p style="text-align: center;">Europa League final will take place in Hungary between FC Sevilla and AS Roma</p>
+                        <p style="text-align: center;"><a href="https://www.uefa.com/uefaeuropaleague/news/0271-142efc51ba36-20a4481bdc54-1000--sevilla-vs-roma-in-the-2023-uefa-europa-league-final-all-y/">For more information click here</a></p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="~/lib/images/4.jpg" alt="Football News 1" style="max-width: 60%; max-height: 60%; display: block; margin: 0 auto;" alt="Football News 2" alt="Football News 3">
+                    <div class="slider-caption">
+                        <p style="text-align: center;">Conference League final will take place in Prague between Fiorentina and WestHam United</p>
+                        <p style="text-align: center;"><a href="https://www.uefa.com/uefaeuropaconferenceleague/news/0278-15f574835e19-5f18d342d950-1000--fiorentina-vs-west-ham-in-europa-conference-league-final/">For more information click here</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-button">&lt;</button>
+                <button class="next-button">&gt;</button>
+            </div>
+        </div>
+
+        <div class="article">
+            <section class="latest-news">
+                <h2>Latest News</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.skysports.com/football/news">Latest football news</a>
+                    </li>
+                    <li>
+                        <a href="https://footballdatabase.com/ranking/world/1">Team Ranking</a>
+                    </li>
+                    <li>
+                        <a href="https://www.radiotimes.com/tv/sport/football/best-football-players-world/">Best football players</a>
+                    </li>
+                    <!-- Add more news items as needed -->
+                </ul>
+            </section>
+            <p><a href="https://www.bbc.com/sport/football">More Information: </a></p>
+        </div>
+
+        <div class="article">
+            <h2>Transfer Rumors</h2>
+            <p>Real Madrid is rumored to be interested in signing a top striker from a rival club during the upcoming transfer window.</p>
+            <p class="date">Published: May 21, 2023</p>
+            <p><a href="https://www.transfermarkt.com/">Read more</a></p>
+        </div>
+
+        <div class="links">
+            <a href="https://www.fifa.com/">FIFA</a>
+            <a href="https://www.uefa.com/">UEFA</a>
+            <a href="https://www.premierleague.com/">Premier League</a>
+            <a href="https://www.laliga.com/">La Liga</a>
+        </div>
+
+        <button class="privacy-button">Privacy</button>
+        <div class="privacy-info">
+            <h2>Privacy</h2>
+            <p>This website is for informational purposes only and does not collect any personal data from visitors.</p>
+            <p>All trademarks and logos used on this website are the property of their respective owners.</p>
+            <p>&copy; 2023 Football News. All rights reserved.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Football News. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Slider
+        const sliderInner = document.querySelector('.slider-inner');
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        let currentIndex = 0;
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < sliderItems.length - 1) {
+                currentIndex++;
+                sliderInner.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                sliderInner.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+            }
+        });
+
+        // JavaScript for Privacy Button
+        const privacyButton = document.querySelector('.privacy-button');
+        const privacyInfo = document.querySelector('.privacy-info');
+
+        privacyButton.addEventListener('click', () => {
+            privacyInfo.style.display = privacyInfo.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
+

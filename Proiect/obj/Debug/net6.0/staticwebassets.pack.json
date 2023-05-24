@@ -197,6 +197,50 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\10.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\11.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\5.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\6.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\7.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\8.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\9.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\images\\alex-azabache-1cPWeb3Ud30-unsplash.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\alex-azabache-1cPWeb3Ud30-unsplash.jpg"
+    },
+    {
       "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -243,6 +287,10 @@
     {
       "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\tripo\\OneDrive\\Desktop\\Proiect\\Proiect-II\\Proiect\\wwwroot\\lib\\music\\Intro - UEFA Champions League [UCL] 2007.mp3",
+      "PackagePath": "staticwebassets\\lib\\music\\Intro - UEFA Champions League [UCL] 2007.mp3"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Proiect.Microsoft.AspNetCore.StaticWebAssets.props",

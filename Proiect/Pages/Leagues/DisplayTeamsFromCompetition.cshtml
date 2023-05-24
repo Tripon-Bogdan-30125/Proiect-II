@@ -1,0 +1,112 @@
+﻿@page
+@model Proiect.Pages.Leagues.DisplayTeamsFromCompetitionModel
+@{
+
+    <style>
+        /* CSS Styles for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold; /* Set text to bold */
+            color: #000; /* Set text color to black */
+        }
+
+        th {
+            background-color: #002366;
+            color: #fff;
+        }
+
+        /* CSS Styles for the buttons */
+        .btn {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background-color: #002366;
+            color: #fff;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-light {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .btn-sm {
+            font-size: 14px;
+        }
+
+        /* CSS Styles for the container */
+        .container {
+            max-width: 1200px; /* Adjust the max-width to make it bigger */
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* Additional CSS Styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            font-weight: bold; /* Set body text to bold */
+            color: #000; /* Set body text color to black */
+        }
+
+        h2 {
+            color: #002366;
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+	<h2>List of Teams</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>TeamValue</th>
+				<th>SquadSize</th>
+				<th>Stadium</th>
+				<th>City</th>
+				<th>idLeague</th>
+				<th>Action</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item2 in Model.teamList)
+			{
+				<tr>
+					<td>@item2.id</td>
+					<td>@item2.name</td>
+					<td>@item2.teamValue</td>
+					<td>@item2.squadSize</td>
+					<td>@item2.stadium</td>
+					<td>@item2.city</td>
+					<td>@item2.idLeague</td>
+					<td>
+						<a class="btn btn-light btn-sm" href="/Leagues/DisplayPlayers?id=@item2.id">DisplayPlayers</a>
+						<a class="btn btn-dark btn-sm" href="/Leagues/Staff?id=@item2.id">DisplayStaff</a>
+					</td>
+
+				</tr>
+
+			}
+		</tbody>
+	</table>
+}
